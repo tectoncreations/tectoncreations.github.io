@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101820">
+  <meta name="description" content="Official Tecton Creations support center for product compatibility guides, installation instructions, manuals, and troubleshooting.">
+  <title>Support Center | Tecton Creations</title>
+  <style>
+    :root { color-scheme: light; --ink:#17232e; --muted:#5e6a75; --line:#e2e8ee; --accent:#187b9d; --bg:#f5f8fa; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif; background:var(--bg); color:var(--ink); line-height:1.6; }
+    a { color:inherit; }
+    a:focus-visible { outline:3px solid #167fa6; outline-offset:4px; }
+    .container { width:min(1120px,calc(100% - 40px)); margin-inline:auto; }
+    header { background:#101820; color:white; border-bottom:4px solid #278eac; }
+    .header-inner { min-height:105px; display:flex; align-items:center; justify-content:space-between; gap:24px; padding-block:18px; }
+    .logo { display:block; max-width:min(330px,100%); max-height:74px; width:auto; height:auto; object-fit:contain; }
+    .header-label { font-size:.85rem; letter-spacing:.14em; text-transform:uppercase; font-weight:700; color:#c3d9e2; text-align:right; }
+    .hero { padding:72px 0 52px; text-align:center; }
+    .eyebrow { margin:0 0 10px; font-weight:750; color:#137391; text-transform:uppercase; letter-spacing:.14em; font-size:.82rem; }
+    h1 { font-size:clamp(2.1rem,5vw,3.65rem); letter-spacing:-.045em; line-height:1.13; margin:0 0 20px; }
+    .intro { max-width:670px; margin:0 auto; font-size:1.1rem; color:var(--muted); }
+    .section-title { font-size:1.35rem; margin:0 0 22px; }
+    .cards { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:22px; margin-bottom:68px; }
+    .card { background:#fff; border:1px solid var(--line); border-radius:16px; padding:30px 26px; display:flex; flex-direction:column; text-decoration:none; box-shadow:0 8px 24px rgba(20,40,55,.045); transition:transform .2s ease,box-shadow .2s ease,border-color .2s ease; }
+    .card:hover { transform:translateY(-4px); box-shadow:0 16px 32px rgba(20,40,55,.10); border-color:#8cbacb; }
+    .icon { width:58px; height:58px; border-radius:14px; display:grid; place-items:center; background:#e8f4f8; color:#146f8c; margin-bottom:23px; }
+    .icon svg { width:30px; height:30px; fill:none; stroke:currentColor; stroke-width:1.8; stroke-linecap:round; stroke-linejoin:round; }
+    h2.card-title { font-size:1.5rem; margin:0 0 8px; line-height:1.25; }
+    .tag { color:#147c9b; font-size:.75rem; font-weight:800; text-transform:uppercase; letter-spacing:.11em; margin-bottom:12px; }
+    .card p { margin:0 0 22px; color:var(--muted); flex:1; }
+    .action { font-weight:750; color:#0c6987; }
+    .note { background:#eaf2f6; border:1px solid #d5e6ee; padding:24px 28px; border-radius:12px; margin-bottom:65px; }
+    .note h2 { font-size:1.08rem; margin:0 0 6px; }
+    .note p { margin:0; color:#4e606d; }
+    footer { background:#101820; color:#cbd5da; padding:28px 0; font-size:.9rem; }
+    .footer-inner { display:flex; justify-content:space-between; gap:16px; flex-wrap:wrap; }
+    @media(max-width:800px) { .cards { grid-template-columns:1fr; gap:16px; } .hero { padding:54px 0 40px; } .card { padding:25px; } }
+    @media(max-width:520px) { .header-inner { align-items:flex-start; flex-direction:column; gap:8px; } .header-label { text-align:left; } .logo { max-width:260px; } }
+    @media(prefers-reduced-motion:reduce) { .card { transition:none; } .card:hover { transform:none; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container header-inner">
+      <a href="/" aria-label="Tecton Creations Support Center home">
+        <img class="logo" src="https://tectoncreations.com/cdn/shop/files/TectonCreationsLogoCroppedInAlpha.png?height=184&amp;v=1770178556" alt="Tecton Creations logo">
+      </a>
+      <div class="header-label">Official Support Center</div>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero" aria-labelledby="page-title">
+      <p class="eyebrow">Built With Intent</p>
+      <h1 id="page-title">How can we help?</h1>
+      <p class="intro">Find product compatibility information, setup and installation instructions, and helpful documentation for your Tecton Creations products.</p>
+    </section>
+    <section aria-labelledby="browse-title">
+      <h2 class="section-title" id="browse-title">Browse support by product family</h2>
+      <div class="cards">
+        <a class="card" href="/forge/">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="3" y="5" width="19" height="15" rx="2"/><path d="M1 24h23M12 20v4"/><rect x="24" y="9" width="6" height="14" rx="1"/></svg></div>
+          <span class="tag">Product support</span>
+          <h2 class="card-title">Tecton Forge™</h2>
+          <p>Phone Wing laptop compatibility charts, Grip Strip selection and installation, and guides for 3D printing accessories.</p>
+          <span class="action">Explore Forge support →</span>
+        </a>
+        <a class="card" href="/nook/">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="7" y="3" width="18" height="26" rx="3"/><rect x="12" y="9" width="8" height="13" rx="1"/><path d="M16 12v3M14 18h4"/></svg></div>
+          <span class="tag">Product support</span>
+          <h2 class="card-title">Tecton Nook™</h2>
+          <p>Wall plate shelf installation, mounting instructions, product configurations, and care information.</p>
+          <span class="action">Explore Nook support →</span>
+        </a>
+        <a class="card" href="/gallery/">
+          <div class="icon" aria-hidden="true"><svg viewBox="0 0 32 32"><rect x="4" y="4" width="24" height="24" rx="2"/><rect x="8" y="8" width="16" height="16" rx="1"/><circle cx="13" cy="13" r="2"/><path d="m9 22 5-5 3 3 3-4 3 6"/></svg></div>
+          <span class="tag">Product support</span>
+          <h2 class="card-title">Tecton Gallery™</h2>
+          <p>Photo frame setup, wall mounting and display instructions, and personalized product guidance.</p>
+          <span class="action">Explore Gallery support →</span>
+        </a>
+      </div>
+    </section>
+    <aside class="note" aria-labelledby="note-title">
+      <h2 id="note-title">About these guides</h2>
+      <p>This site provides product information and technical support only. Always review the instructions and compatibility information for your specific product and device before installation.</p>
+    </aside>
+  </main>
+  <footer><div class="container footer-inner"><span>© <span id="year">2026</span> Tecton Creations LLC. All rights reserved.</span><span>Built With Intent.</span></div></footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
