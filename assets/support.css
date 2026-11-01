@@ -46,7 +46,9 @@ footer { background:#101820; color:#cbd5da; padding:28px 0; font-size:.9rem; }
 .brand-button { display:block; width:100%; max-width:260px; margin-top:auto; padding:14px 16px; background:var(--hub); color:#fff; border-radius:8px; font-size:.95rem; font-weight:700; }
 .brand-card:hover .brand-button { background:#005b94; }
 .finder { max-width:760px; margin:0 auto 36px; text-align:left; }
-.finder label { display:block; font-weight:800; color:var(--hub-ink); margin-bottom:8px; }
+.finder label { display:block; font-weight:800; color:var(--hub-ink); margin-bottom:4px; }
+.finder-count { margin:0 0 10px; color:#4e606d; font-size:.95rem; }
+.finder-count strong { color:var(--hub); font-size:1.15rem; }
 .finder-combo { position:relative; }
 #laptop-search { width:100%; border:1px solid #c5d4e0; border-radius:12px; background:#fff; color:var(--ink); font:inherit; font-size:1.05rem; padding:14px 16px; }
 #laptop-search:focus { outline:3px solid #167fa6; outline-offset:2px; }

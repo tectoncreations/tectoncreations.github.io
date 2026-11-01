@@ -27,8 +27,9 @@
       </div>
       <div class="finder" data-finder>
         <label for="laptop-search">Find your laptop</label>
+        <p id="finder-count" class="finder-count"></p>
         <div class="finder-combo">
-          <input id="laptop-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="laptop-results" aria-describedby="finder-status" autocomplete="off" placeholder="Try MacBook Air, XPS 13, or Legion" spellcheck="false">
+          <input id="laptop-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="laptop-results" aria-describedby="finder-count finder-status" autocomplete="off" placeholder="Try MacBook Air, XPS 13, or Legion" spellcheck="false">
           <div id="laptop-results" class="finder-list" role="listbox" hidden></div>
         </div>
         <p id="finder-status" class="finder-status" aria-live="polite"></p>

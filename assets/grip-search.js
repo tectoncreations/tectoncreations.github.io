@@ -7,10 +7,15 @@
   var list = root.querySelector("#laptop-results");
   var pick = root.querySelector("#finder-pick");
   var status = root.querySelector("#finder-status");
+  var count = root.querySelector("#finder-count");
   var active = -1;
   var matches = [];
   var selectedId = "";
   var limit = 18;
+
+  if (count) {
+    count.innerHTML = "<strong>" + data.laptops.length + "</strong> verified laptops, fit tested and validated";
+  }
 
   function text(value) {
     return String(value == null ? "" : value)
