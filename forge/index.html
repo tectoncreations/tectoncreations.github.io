@@ -23,7 +23,16 @@
       <div class="hub-header">
         <h1 id="hub-title">Tecton Forge™ <span>Phone Wing</span></h1>
         <div class="hub-subtitle">Grip Strip Compatibility Guide</div>
-        <p>Select your laptop manufacturer to find the correct Grip Strips for your Tecton Forge™ Phone Wing. This guide is for Etsy orders and shop orders.</p>
+        <p>Search for your laptop, or select a manufacturer below. This guide is for Etsy orders and shop orders.</p>
+      </div>
+      <div class="finder" data-finder>
+        <label for="laptop-search">Find your laptop</label>
+        <div class="finder-combo">
+          <input id="laptop-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="laptop-results" aria-describedby="finder-status" autocomplete="off" placeholder="Try MacBook Air, XPS 13, or Legion" spellcheck="false">
+          <div id="laptop-results" class="finder-list" role="listbox" hidden></div>
+        </div>
+        <p id="finder-status" class="finder-status" aria-live="polite"></p>
+        <div id="finder-pick" class="finder-pick" hidden></div>
       </div>
       <div class="brand-grid">
     <a class="brand-card" href="/forge/apple/">
@@ -106,6 +115,8 @@
 
   <footer><div class="container footer-inner"><span>© <span class="year">2026</span> Tecton Creations LLC. All rights reserved.</span><span>Built With Intent.</span></div></footer>
   <script>document.querySelectorAll(".year").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+  <script src="/assets/grip-strips.js"></script>
+  <script src="/assets/grip-search.js"></script>
 
 </body>
 </html>
