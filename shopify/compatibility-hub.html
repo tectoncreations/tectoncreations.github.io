@@ -1,0 +1,1275 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopify preview | Tecton Forge Phone Wing Compatibility Hub</title>
+</head>
+<body style="margin:0;background:#f5f8fb;">
+<!-- SHOPIFY START: paste from here through SHOPIFY END into the Shopify page custom HTML. -->
+<style>
+  .tecton-brand-image {
+    width: 100%;
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  .tecton-brand-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+  }
+
+  .tecton-hub {
+    width: 94vw;
+    max-width: 1500px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px 0 40px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #071b3b;
+    box-sizing: border-box;
+  }
+
+  .tecton-hub * {
+    box-sizing: border-box;
+  }
+
+  .tecton-hub-header {
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .tecton-hub-header h1 {
+    font-size: clamp(28px, 3vw, 46px);
+    font-weight: 800;
+    color: #071b3b;
+    margin: 0 0 10px;
+    line-height: 1.2;
+  }
+
+  .tecton-hub-header h1 span {
+    color: #0878bd;
+  }
+
+  .tecton-hub-subtitle {
+    font-size: clamp(14px, 1.5vw, 20px);
+    color: #68717e;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .tecton-hub-description {
+    font-size: 16px;
+    color: #344054;
+    margin: 0;
+  }
+
+  .tecton-finder {
+    max-width: 760px;
+    margin: 28px auto 0;
+    text-align: left;
+  }
+
+  .tecton-finder-label {
+    display: block;
+    font-weight: 800;
+    color: #071b3b;
+    margin-bottom: 4px;
+    font-size: 16px;
+  }
+
+  .tecton-finder-count {
+    margin: 0 0 10px;
+    color: #4e606d;
+    font-size: 15px;
+  }
+
+  .tecton-finder-count strong {
+    color: #0878bd;
+    font-size: 18px;
+  }
+
+  .tecton-finder-combo {
+    position: relative;
+  }
+
+  .tecton-laptop-search {
+    width: 100%;
+    border: 1px solid #c5d4e0;
+    border-radius: 12px;
+    background: #fff;
+    color: #071b3b;
+    font-family: inherit;
+    font-size: 16px;
+    padding: 14px 16px;
+  }
+
+  .tecton-laptop-search:focus {
+    outline: 3px solid #0878bd;
+    outline-offset: 2px;
+  }
+
+  .tecton-finder-list {
+    position: absolute;
+    z-index: 20;
+    left: 0;
+    right: 0;
+    top: calc(100% + 6px);
+    max-height: 320px;
+    overflow: auto;
+    background: #fff;
+    border: 1px solid #d9e3ed;
+    border-radius: 12px;
+    box-shadow: 0 12px 28px rgba(20, 40, 55, 0.12);
+    text-align: left;
+  }
+
+  .tecton-finder-brand {
+    padding: 8px 14px 4px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0878bd;
+  }
+
+  .tecton-finder-option {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    align-items: baseline;
+    padding: 10px 14px;
+    cursor: pointer;
+  }
+
+  .tecton-finder-option.is-active,
+  .tecton-finder-option:hover {
+    background: #e8f4fa;
+  }
+
+  .tecton-finder-option-meta {
+    color: #68717e;
+    font-size: 13px;
+    white-space: nowrap;
+  }
+
+  .tecton-finder-more {
+    padding: 8px 14px 12px;
+    color: #68717e;
+    font-size: 14px;
+  }
+
+  .tecton-finder-status {
+    min-height: 1.2em;
+    margin: 8px 0 0;
+    color: #68717e;
+    font-size: 14px;
+  }
+
+  .tecton-finder-pick {
+    margin-top: 16px;
+    background: #fff;
+    border: 1px solid #d9e3ed;
+    border-radius: 16px;
+    padding: 22px 22px 18px;
+    box-shadow: 0 8px 24px rgba(20, 40, 55, 0.05);
+    text-align: left;
+  }
+
+  .tecton-finder-pick h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #071b3b;
+    font-weight: 800;
+  }
+
+  .tecton-finder-kicker {
+    margin: 0 0 4px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #0878bd;
+  }
+
+  .tecton-finder-fit {
+    margin: 0 0 16px;
+    font-size: 16px;
+    color: #071b3b;
+  }
+
+  .tecton-finder-scale-label {
+    margin: 0 0 8px;
+    font-weight: 700;
+    font-size: 15px;
+  }
+
+  .tecton-strip-scale {
+    list-style: none;
+    margin: 0 0 14px;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(7, minmax(0, 1fr));
+    gap: 8px;
+  }
+
+  .tecton-strip {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    text-align: center;
+    padding: 8px 4px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+  }
+
+  .tecton-strip.is-chosen {
+    background: #e8f4fa;
+    border-color: #8cb6d4;
+  }
+
+  .tecton-swatch {
+    width: 100%;
+    max-width: 42px;
+    height: 58px;
+    border-radius: 6px;
+    border: 1px solid rgba(16, 24, 32, 0.18);
+  }
+
+  .tecton-swatch-black { background: #1b1b1b; }
+  .tecton-swatch-gray { background: #8e949b; }
+  .tecton-swatch-white { background: #f7f7f7; }
+  .tecton-swatch-orange { background: #f26a1a; }
+  .tecton-swatch-red { background: #e10600; }
+  .tecton-swatch-green { background: #1c9a3c; }
+  .tecton-swatch-blue { background: #1d74d6; }
+
+  .tecton-strip-name {
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 1.2;
+  }
+
+  .tecton-strip-rank {
+    min-height: 1em;
+    font-size: 11px;
+    color: #68717e;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+  }
+
+  .tecton-finder-adjust {
+    margin: 0 0 14px;
+    color: #4e606d;
+    font-size: 15px;
+  }
+
+  .tecton-finder-chart {
+    font-weight: 700;
+    color: #0878bd !important;
+    text-decoration: none;
+  }
+
+  .tecton-finder-chart:hover {
+    text-decoration: underline;
+  }
+
+  .tecton-brand-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    margin-top: 34px;
+  }
+
+  .tecton-brand-card {
+    background: #ffffff;
+    border: 1px solid #d9e3ed;
+    border-radius: 14px;
+    padding: 28px 20px;
+    text-align: center;
+    box-shadow: 0 3px 12px rgba(0, 30, 70, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tecton-brand-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 40, 90, 0.12);
+    border-color: #0878bd;
+  }
+
+  .tecton-brand-name {
+    font-size: 30px;
+    font-weight: 800;
+    color: #071b3b;
+    margin: 0 0 20px;
+    min-height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tecton-brand-button {
+    display: block;
+    width: 100%;
+    max-width: 260px;
+    margin-top: auto;
+    padding: 14px 16px;
+    background: #0878bd;
+    color: #ffffff !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background 0.2s ease;
+  }
+
+  .tecton-brand-button:hover {
+    background: #005b94;
+    color: #ffffff !important;
+  }
+
+  .tecton-brand-button:focus-visible {
+    outline: 3px solid #071b3b;
+    outline-offset: 3px;
+  }
+
+  .tecton-hub-footer {
+    margin-top: 35px;
+    padding: 22px;
+    border-top: 2px solid #0878bd;
+    text-align: center;
+    font-size: 18px;
+    color: #071b3b;
+  }
+
+  .tecton-hub-footer strong {
+    color: #0878bd;
+  }
+
+  @media screen and (max-width: 1000px) {
+    .tecton-brand-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tecton-brand-card {
+      padding: 24px 18px;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    .tecton-hub {
+      width: 96vw;
+      margin: 10px 0 25px;
+    }
+
+    .tecton-brand-grid {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+
+    .tecton-brand-card {
+      padding: 22px;
+    }
+
+    .tecton-brand-name {
+      font-size: 26px;
+      margin-bottom: 10px;
+    }
+
+    .tecton-hub-subtitle {
+      letter-spacing: 1px;
+    }
+
+    .tecton-hub-footer {
+      font-size: 15px;
+    }
+
+    .tecton-strip-scale {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .tecton-finder-option {
+      align-items: flex-start;
+      flex-direction: column;
+      gap: 2px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tecton-brand-card,
+    .tecton-brand-button {
+      transition: none;
+    }
+
+    .tecton-brand-card:hover {
+      transform: none;
+    }
+  }
+</style>
+
+<div class="tecton-hub">
+  <div class="tecton-hub-header">
+    <h1>Tecton Forge™ <span>Phone Wing</span></h1>
+    <div class="tecton-hub-subtitle">GRIP STRIP COMPATIBILITY GUIDE</div>
+    <p class="tecton-hub-description">Select your laptop manufacturer to find the correct Grip Strips for your Tecton Forge™ Phone Wing.</p>
+    <div class="tecton-finder" data-tecton-finder>
+      <label class="tecton-finder-label" for="tecton-laptop-search">Find your laptop</label>
+      <p id="tecton-finder-count" class="tecton-finder-count"></p>
+      <div class="tecton-finder-combo">
+        <input id="tecton-laptop-search" class="tecton-laptop-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="tecton-laptop-results" aria-describedby="tecton-finder-count tecton-finder-status" autocomplete="off" placeholder="Try MacBook Air, XPS 13, or Legion" spellcheck="false">
+        <div id="tecton-laptop-results" class="tecton-finder-list" role="listbox" hidden></div>
+      </div>
+      <p id="tecton-finder-status" class="tecton-finder-status" aria-live="polite"></p>
+      <div id="tecton-finder-pick" class="tecton-finder-pick" hidden></div>
+    </div>
+  </div>
+
+  <div class="tecton-brand-grid">
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">Apple</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/MacBookThumbnail.png?v=1793069066" alt="Apple MacBook - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/phone-wing-apple-compatibility">View Apple Compatibility →</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">Dell</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/DellThumbnail.png?v=1793069222" alt="Dell Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/dell-laptop-phone-wing-compatibility">View Dell Compatibility →</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">HP</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/HPThumbnail.png?v=1793069361" alt="HP Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/hp-laptop-phone-wing-compatibility">View HP Compatibility →</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">Lenovo</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/LenovoThumbnail.png?v=1793069483" alt="Lenovo Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/lenovo-laptop-phone-wing-compatibility">View Lenovo Compatibility →</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">ASUS</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/ASUSThumbnail.png?v=1793069706" alt="ASUS Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/asus-laptop-phone-wing-compatibility">View ASUS Compatibility →</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">Acer</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/AcerThumbnail.png?v=1793069838" alt="Acer Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/acer-laptop-phone-wing-compatibility">View Acer Compatibility →</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">Samsung</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/SamsungThumbnail.png?v=1793069961" alt="Samsung Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/samsung-laptop-phone-wing-compatibility-guide">View Samsung Compatibility →</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">Microsoft</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/MicrosoftThumbnail.png?v=1793070096" alt="Microsoft Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/microsoft-surface-phone-wing-compatibility-guide">View Microsoft Compatibility →</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">LG</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/LGThumbnail.png?v=1793070613" alt="LG Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/lg-gram-phone-wing-compatibility">View LG Compatibility</a>
+    </div>
+    <div class="tecton-brand-card">
+      <div class="tecton-brand-name">Gaming Laptops</div>
+      <div class="tecton-brand-image">
+        <img src="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/GamingThumbnail.png?v=1793070809" alt="Gaming Laptop - Tecton Forge Phone Wing Compatibility" loading="lazy">
+      </div>
+      <a class="tecton-brand-button" href="/pages/gaming-laptop-phone-wing-compatibility-guide">View Gaming Compatibility →</a>
+    </div>
+  </div>
+
+  <div class="tecton-hub-footer">
+    <strong>14 TPU Grip Strips Included</strong>
+    <br>
+    Choose the correct fit for your laptop before installation.
+  </div>
+</div>
+<script>
+(function () {
+  var data = {
+  "stripsPerWing": 4,
+  "manufacturers": [
+    "Apple",
+    "Dell",
+    "HP",
+    "Lenovo",
+    "ASUS",
+    "Acer",
+    "Samsung",
+    "Microsoft",
+    "LG",
+    "Gaming"
+  ],
+  "groups": {
+    "1": {
+      "name": "Group 1",
+      "colors": [
+        "Black",
+        "Gray",
+        "White",
+        "Orange",
+        "Red",
+        "Green",
+        "Blue"
+      ]
+    },
+    "2": {
+      "name": "Group 2",
+      "colors": [
+        "Orange",
+        "Green",
+        "Blue",
+        "Gray",
+        "Black",
+        "White",
+        "Red"
+      ]
+    }
+  },
+  "laptops": [
+    {
+      "manufacturer": "Apple",
+      "name": "MacBook Pro 16\"",
+      "detail": "2021+",
+      "group": 2,
+      "color": "Black",
+      "chart": "/pages/phone-wing-apple-compatibility"
+    },
+    {
+      "manufacturer": "Apple",
+      "name": "MacBook Pro 14\"",
+      "detail": "2021+",
+      "group": 2,
+      "color": "Gray",
+      "chart": "/pages/phone-wing-apple-compatibility"
+    },
+    {
+      "manufacturer": "Apple",
+      "name": "MacBook Neo 13\"",
+      "detail": "2026+",
+      "group": 2,
+      "color": "Gray",
+      "chart": "/pages/phone-wing-apple-compatibility"
+    },
+    {
+      "manufacturer": "Apple",
+      "name": "MacBook Air 13\"",
+      "detail": "M2+ 2022+",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/phone-wing-apple-compatibility"
+    },
+    {
+      "manufacturer": "Apple",
+      "name": "MacBook Air 15\"",
+      "detail": "M2+ 2022+",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/phone-wing-apple-compatibility"
+    },
+    {
+      "manufacturer": "Apple",
+      "name": "MacBook Pro 13\" Retina",
+      "detail": "A1502",
+      "group": 2,
+      "color": "Black",
+      "chart": "/pages/phone-wing-apple-compatibility"
+    },
+    {
+      "manufacturer": "Apple",
+      "name": "MacBook Pro 13\"",
+      "detail": "A1708",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/phone-wing-apple-compatibility"
+    },
+    {
+      "manufacturer": "Dell",
+      "name": "XPS 13",
+      "detail": "9310 / 9320 / 9340 / 9350",
+      "group": 1,
+      "color": "White",
+      "chart": "/pages/dell-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Dell",
+      "name": "XPS 16",
+      "detail": "9640 / 9650",
+      "group": 2,
+      "color": "Black",
+      "chart": "/pages/dell-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Dell",
+      "name": "XPS 17",
+      "detail": "9700 / 9710 / 9720 / 9730",
+      "group": 2,
+      "color": "Gray",
+      "chart": "/pages/dell-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Dell",
+      "name": "Latitude 13",
+      "detail": "7330 / 7340 / 7350",
+      "group": 1,
+      "color": "White",
+      "chart": "/pages/dell-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Dell",
+      "name": "Latitude 14",
+      "detail": "7440 / 7450 / 7455",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/dell-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Dell",
+      "name": "Latitude 15",
+      "detail": "5540 / 5550",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/dell-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook Ultra",
+      "detail": "14\" 3K OLED Touchscreen",
+      "group": 2,
+      "color": "Black",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook 5",
+      "detail": "14\" 2K OLED Touchscreen",
+      "group": 2,
+      "color": "Black",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook 3",
+      "detail": "17.3\" HD Laptop",
+      "group": 1,
+      "color": "Red",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook 3",
+      "detail": "14\" & 16\" 2K Touchscreen",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook 3",
+      "detail": "14\" OLED Laptop",
+      "group": 1,
+      "color": "Green",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Googlebook",
+      "detail": "14\" 3K OLED Touchscreen",
+      "group": 2,
+      "color": "Black",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook X",
+      "detail": "14\" 2K OLED Touchscreen",
+      "group": 2,
+      "color": "Orange",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook X",
+      "detail": "17.3\" Touchscreen Laptop",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook X",
+      "detail": "16\" 2K OLED Touchscreen",
+      "group": 1,
+      "color": "Green",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Omnibook X",
+      "detail": "Flip 2-in-1 16\" Touchscreen",
+      "group": 1,
+      "color": "Red",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Hyperx Omen",
+      "detail": "16\" 2K Gaming Laptop",
+      "group": 1,
+      "color": "Red",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Victus",
+      "detail": "15.6\" Gaming Laptop",
+      "group": 1,
+      "color": "Red",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Chromebook Plus",
+      "detail": "14\" 2K Touchscreen",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "HP",
+      "name": "Chromebook Plus",
+      "detail": "2-in-1 14\" 2K Touchscreen",
+      "group": 1,
+      "color": "Gray",
+      "chart": "/pages/hp-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Yoga Slim 7X",
+      "detail": "14\" 2K OLED Touchscreen",
+      "group": 2,
+      "color": "White",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Yoga 9n, 9i",
+      "detail": "16\" & 14\" 2-in-1 3K OLED Touchscreen",
+      "group": 2,
+      "color": "Green",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Yoga 7a",
+      "detail": "14\" 2K OLED Touchscreen",
+      "group": 2,
+      "color": "Orange",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Yoga 7a",
+      "detail": "16\" 2K OLED Touchscreen",
+      "group": 1,
+      "color": "Green",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Yoga Pro 7i Aura Edition",
+      "detail": "15.3\" 3K OLED Laptop",
+      "group": 2,
+      "color": "White",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Yoga Pro 7a",
+      "detail": "15.3\" 3K OLED Touchscreen",
+      "group": 2,
+      "color": "Black",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Legion 7a",
+      "detail": "16\" 2.5K Gaming Laptop",
+      "group": 2,
+      "color": "Blue",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "IdeaPad Slim 3i",
+      "detail": "15.6\" HD Laptop, 15.3\" 2K Touchscreen",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "IdeaPad Slim 3",
+      "detail": "14\" 2K Touchscreen",
+      "group": 1,
+      "color": "Red",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "LOQ",
+      "detail": "15.6\" 2K Gaming Laptop",
+      "group": 1,
+      "color": "Red",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Googlebook",
+      "detail": "15.3\" 3K 120Hz OLED Touchscreen",
+      "group": 2,
+      "color": "Orange",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Chromebook Plus",
+      "detail": "15.3\" 2K Touchscreen",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Lenovo",
+      "name": "Chromebook Plus 2-in-1",
+      "detail": "14\" Full HD Touchscreen",
+      "group": 1,
+      "color": "Blue",
+      "chart": "/pages/lenovo-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "Zenbook 14",
+      "detail": "14\" 2K OLED Laptop",
+      "group": 2,
+      "color": "Blue",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "Zenbook 14",
+      "detail": "14\" 2K OLED Touchscreen",
+      "group": 2,
+      "color": "Orange",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "ProArt P16, P14",
+      "detail": "16\" & 14\" OLED Touchscreen",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "ProArt PX13",
+      "detail": "13\" 3K OLED 2-in-1 Touchscreen",
+      "group": 2,
+      "color": "Gray",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "Vivobook Go 14",
+      "detail": "14\" 2K Laptop",
+      "group": 1,
+      "color": "Green",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "ROG Zephyrus G14",
+      "detail": "14\" OLED 3K Gaming Laptop",
+      "group": 2,
+      "color": "White",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "ROG Strix G18",
+      "detail": "18\" 2.5K 240Hz Gaming Laptop",
+      "group": 1,
+      "color": "Black",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "ROG Strix G16",
+      "detail": "16\" FHD 165Hz Gaming Laptop",
+      "group": 1,
+      "color": "Blue",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "Chromebook CX14",
+      "detail": "14\" FHD",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "ASUS",
+      "name": "Chromebook Plus CX34",
+      "detail": "14\" FHD",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/asus-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Acer",
+      "name": "Swift Air",
+      "detail": "14\" 2K LCD Laptop",
+      "group": 2,
+      "color": "Gray",
+      "chart": "/pages/acer-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Acer",
+      "name": "Swift Go",
+      "detail": "16\" WUXGA Touchscreen",
+      "group": 2,
+      "color": "Green",
+      "chart": "/pages/acer-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Acer",
+      "name": "Swift Go",
+      "detail": "16\" 2K OLED Laptop",
+      "group": 2,
+      "color": "Green",
+      "chart": "/pages/acer-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Acer",
+      "name": "Nitro V",
+      "detail": "16\" WUXGA Gaming",
+      "group": 1,
+      "color": "Blue",
+      "chart": "/pages/acer-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Acer",
+      "name": "Predator Neo",
+      "detail": "16\" Gaming Laptop",
+      "group": 2,
+      "color": "Orange",
+      "chart": "/pages/acer-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Acer",
+      "name": "Chromebook (Plus)",
+      "detail": "516 16\", 315 15.6\" Laptops",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/acer-laptop-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Samsung",
+      "name": "Galaxy Book 6",
+      "detail": "16\" Touchscreen IPS LED",
+      "group": 2,
+      "color": "Blue",
+      "chart": "/pages/samsung-laptop-phone-wing-compatibility-guide"
+    },
+    {
+      "manufacturer": "Samsung",
+      "name": "Galaxy Book 4 Edge",
+      "detail": "15.6\" FHD IPS Laptop",
+      "group": 2,
+      "color": "Blue",
+      "chart": "/pages/samsung-laptop-phone-wing-compatibility-guide"
+    },
+    {
+      "manufacturer": "Microsoft",
+      "name": "Surface Laptop Ultra",
+      "detail": "15\" 3K Touchscreen",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/microsoft-surface-phone-wing-compatibility-guide"
+    },
+    {
+      "manufacturer": "Microsoft",
+      "name": "Surface Laptop",
+      "detail": "13.8\" 2K Touchscreen",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/microsoft-surface-phone-wing-compatibility-guide"
+    },
+    {
+      "manufacturer": "Microsoft",
+      "name": "Surface Laptop",
+      "detail": "13\" 2K Touchscreen",
+      "group": 2,
+      "color": "Red",
+      "chart": "/pages/microsoft-surface-phone-wing-compatibility-guide"
+    },
+    {
+      "manufacturer": "Microsoft",
+      "name": "Surface Pro",
+      "detail": "12\" Touchscreen",
+      "group": 1,
+      "color": "White",
+      "chart": "/pages/microsoft-surface-phone-wing-compatibility-guide"
+    },
+    {
+      "manufacturer": "LG",
+      "name": "gram Max",
+      "detail": "17\" 2.5K WQXGA Touchscreen",
+      "group": 2,
+      "color": "Blue",
+      "chart": "/pages/lg-gram-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "LG",
+      "name": "gram Book",
+      "detail": "16\" Touchscreen",
+      "group": 1,
+      "color": "Blue",
+      "chart": "/pages/lg-gram-phone-wing-compatibility"
+    },
+    {
+      "manufacturer": "Gaming",
+      "name": "Alienware",
+      "detail": "15.3\" 2K Gaming Laptop",
+      "group": 1,
+      "color": "White",
+      "chart": "/pages/gaming-laptop-phone-wing-compatibility-guide"
+    },
+    {
+      "manufacturer": "Gaming",
+      "name": "Gigabyte A16",
+      "detail": "165Hz 1920x1200 WUXGA Gaming",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/gaming-laptop-phone-wing-compatibility-guide"
+    },
+    {
+      "manufacturer": "Gaming",
+      "name": "MSI Raider 16 HX",
+      "detail": "16\" 2.5K QHD 240Hz Gaming",
+      "group": 1,
+      "color": "Orange",
+      "chart": "/pages/gaming-laptop-phone-wing-compatibility-guide"
+    }
+  ]
+};
+  var root = document.querySelector("[data-tecton-finder]");
+  if (!data || !root) return;
+
+  var input = root.querySelector("#tecton-laptop-search");
+  var list = root.querySelector("#tecton-laptop-results");
+  var pick = root.querySelector("#tecton-finder-pick");
+  var status = root.querySelector("#tecton-finder-status");
+  var count = root.querySelector("#tecton-finder-count");
+  var active = -1;
+  var matches = [];
+  var limit = 18;
+
+  if (count) {
+    count.innerHTML = "<strong>" + data.laptops.length + "</strong> verified laptops, fit tested and validated";
+  }
+
+  function text(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;");
+  }
+
+  function label(laptop) {
+    return laptop.name + (laptop.detail ? " (" + laptop.detail + ")" : "");
+  }
+
+  function haystack(laptop) {
+    return (laptop.manufacturer + " " + laptop.name + " " + laptop.detail).toLowerCase();
+  }
+
+  function search(query) {
+    var tokens = query.toLowerCase().trim().split(/\s+/).filter(Boolean);
+    if (!tokens.length) return [];
+    var order = {};
+    data.manufacturers.forEach(function (name, index) { order[name] = index; });
+    return data.laptops.filter(function (laptop) {
+      var source = haystack(laptop);
+      return tokens.every(function (token) { return source.indexOf(token) !== -1; });
+    }).sort(function (a, b) {
+      var brand = (order[a.manufacturer] || 0) - (order[b.manufacturer] || 0);
+      if (brand) return brand;
+      return label(a).localeCompare(label(b));
+    });
+  }
+
+  function closeList() {
+    list.hidden = true;
+    input.setAttribute("aria-expanded", "false");
+    input.removeAttribute("aria-activedescendant");
+    active = -1;
+  }
+
+  function setActive(index) {
+    var options = list.querySelectorAll("[role='option']");
+    if (!options.length) return;
+    active = (index + options.length) % options.length;
+    options.forEach(function (option, i) {
+      option.classList.toggle("is-active", i === active);
+      if (i === active) option.scrollIntoView({ block: "nearest" });
+    });
+    input.setAttribute("aria-activedescendant", options[active].id);
+  }
+
+  function renderList() {
+    var shown = matches.slice(0, limit);
+    if (!shown.length) {
+      list.innerHTML = "<div class=\"tecton-finder-more\">No matching laptops. Try a model name, or browse the manufacturers below.</div>";
+      list.hidden = false;
+      input.setAttribute("aria-expanded", "true");
+      status.textContent = "No matching laptops.";
+      return;
+    }
+    var html = "";
+    var brand = "";
+    var optionIndex = 0;
+    shown.forEach(function (laptop) {
+      if (laptop.manufacturer !== brand) {
+        if (brand) html += "</div>";
+        brand = laptop.manufacturer;
+        html += "<div role=\"group\" aria-label=\"" + text(brand) + "\"><div class=\"tecton-finder-brand\">" + text(brand) + "</div>";
+      }
+      html += "<div class=\"tecton-finder-option\" role=\"option\" id=\"tecton-laptop-opt-" + optionIndex + "\" data-index=\"" + optionIndex + "\">" +
+        "<span>" + text(label(laptop)) + "</span>" +
+        "<span class=\"tecton-finder-option-meta\">Group " + laptop.group + " · " + text(laptop.color) + "</span></div>";
+      optionIndex += 1;
+    });
+    html += "</div>";
+    if (matches.length > shown.length) {
+      html += "<div class=\"tecton-finder-more\">Showing " + shown.length + " of " + matches.length + ". Keep typing to narrow the list.</div>";
+    }
+    list.innerHTML = html;
+    list.hidden = false;
+    input.setAttribute("aria-expanded", "true");
+    status.textContent = matches.length + " matching laptops.";
+    active = -1;
+  }
+
+  function showLaptop(laptop) {
+    var group = data.groups[String(laptop.group)];
+    var colors = group ? group.colors : [];
+    var swatches = colors.map(function (color, index) {
+      var chosen = color === laptop.color;
+      return "<li class=\"tecton-strip" + (chosen ? " is-chosen" : "") + "\">" +
+        "<span class=\"tecton-swatch tecton-swatch-" + color.toLowerCase() + "\" aria-hidden=\"true\"></span>" +
+        "<span class=\"tecton-strip-name\">" + text(color) + (chosen ? " · recommended" : "") + "</span>" +
+        "<span class=\"tecton-strip-rank\">" + (index === 0 ? "Thinnest" : index === colors.length - 1 ? "Thickest" : "") + "</span>" +
+        "</li>";
+    }).join("");
+    pick.hidden = false;
+    pick.innerHTML =
+      "<p class=\"tecton-finder-kicker\">" + text(laptop.manufacturer) + "</p>" +
+      "<h2>" + text(label(laptop)) + "</h2>" +
+      "<p class=\"tecton-finder-fit\">Use <strong>Group " + laptop.group + " · " + text(laptop.color) + "</strong>. Each wing uses " + data.stripsPerWing + " strips of that color.</p>" +
+      "<p class=\"tecton-finder-scale-label\">" + text(group.name) + " strips, thin to thick</p>" +
+      "<ol class=\"tecton-strip-scale\">" + swatches + "</ol>" +
+      "<p class=\"tecton-finder-adjust\">If the wing is too loose, try the next thicker strip in this group. If it is too tight, try the next thinner strip.</p>" +
+      "<a class=\"tecton-finder-chart\" href=\"" + text(laptop.chart) + "\">View the full " + text(laptop.manufacturer) + " chart</a>";
+  }
+
+  function choose(index) {
+    var laptop = matches[index];
+    if (!laptop) return;
+    input.value = laptop.manufacturer + " " + label(laptop);
+    closeList();
+    showLaptop(laptop);
+    status.textContent = "Showing Grip Strips for " + label(laptop) + ".";
+  }
+
+  input.addEventListener("input", function () {
+    var query = input.value;
+    pick.hidden = true;
+    matches = search(query);
+    if (!query.trim()) {
+      closeList();
+      status.textContent = "";
+      return;
+    }
+    renderList();
+  });
+
+  input.addEventListener("keydown", function (event) {
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+      if (list.hidden) {
+        matches = search(input.value);
+        if (matches.length) renderList();
+      }
+      setActive(active + 1);
+    } else if (event.key === "ArrowUp") {
+      event.preventDefault();
+      setActive(active < 0 ? 0 : active - 1);
+    } else if (event.key === "Enter" && !list.hidden && matches.length) {
+      event.preventDefault();
+      choose(active >= 0 ? active : 0);
+    } else if (event.key === "Escape") {
+      closeList();
+    }
+  });
+
+  list.addEventListener("mousedown", function (event) {
+    var option = event.target.closest("[role='option']");
+    if (!option) return;
+    event.preventDefault();
+    choose(Number(option.getAttribute("data-index")));
+  });
+
+  document.addEventListener("click", function (event) {
+    if (!root.contains(event.target)) closeList();
+  });
+})();
+</script>
+<!-- SHOPIFY END -->
+</body>
+</html>
