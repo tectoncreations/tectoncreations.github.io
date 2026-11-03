@@ -126,6 +126,29 @@
       <label for="fit-email">Email
         <input id="fit-email" name="email" type="email" autocomplete="email" required>
       </label>
+      <button type="button" class="fit-groups-link" data-fit-groups-open aria-expanded="false" aria-controls="fit-groups">See grip strip groups, thinnest to thickest</button>
+      <div id="fit-groups" class="fit-groups" data-fit-groups hidden>
+        <h3>Group 1</h3>
+        <ol class="strip-scale" aria-label="Group 1, thinnest to thickest">
+          <li class="strip"><span class="swatch swatch-black" aria-hidden="true"></span><span class="strip-name">Black</span><span class="strip-rank">Thinnest</span></li>
+          <li class="strip"><span class="swatch swatch-gray" aria-hidden="true"></span><span class="strip-name">Gray</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-white" aria-hidden="true"></span><span class="strip-name">White</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-orange" aria-hidden="true"></span><span class="strip-name">Orange</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-red" aria-hidden="true"></span><span class="strip-name">Red</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-green" aria-hidden="true"></span><span class="strip-name">Green</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-blue" aria-hidden="true"></span><span class="strip-name">Blue</span><span class="strip-rank">Thickest</span></li>
+        </ol>
+        <h3>Group 2</h3>
+        <ol class="strip-scale" aria-label="Group 2, thinnest to thickest">
+          <li class="strip"><span class="swatch swatch-orange" aria-hidden="true"></span><span class="strip-name">Orange</span><span class="strip-rank">Thinnest</span></li>
+          <li class="strip"><span class="swatch swatch-green" aria-hidden="true"></span><span class="strip-name">Green</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-blue" aria-hidden="true"></span><span class="strip-name">Blue</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-gray" aria-hidden="true"></span><span class="strip-name">Gray</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-black" aria-hidden="true"></span><span class="strip-name">Black</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-white" aria-hidden="true"></span><span class="strip-name">White</span><span class="strip-rank"></span></li>
+          <li class="strip"><span class="swatch swatch-red" aria-hidden="true"></span><span class="strip-name">Red</span><span class="strip-rank">Thickest</span></li>
+        </ol>
+      </div>
       <label for="fit-loose">Loose Grip Strip Selection
         <select id="fit-loose" name="loose" required>
           <option value="">Select a strip</option>

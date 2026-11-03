@@ -38,6 +38,17 @@
     if (event.target === dialog) dialog.close();
   });
 
+  var groupsButton = dialog.querySelector("[data-fit-groups-open]");
+  var groups = dialog.querySelector("[data-fit-groups]");
+  if (groupsButton && groups) {
+    groupsButton.addEventListener("click", function () {
+      var open = groups.hidden;
+      groups.hidden = !open;
+      groupsButton.setAttribute("aria-expanded", open ? "true" : "false");
+      groupsButton.textContent = open ? "Hide grip strip groups" : "See grip strip groups, thinnest to thickest";
+    });
+  }
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     showError("");

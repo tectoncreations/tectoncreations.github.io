@@ -123,7 +123,7 @@
   }
 
   .tecton-fit-dialog {
-    width: min(480px, calc(100vw - 32px));
+    width: min(560px, calc(100vw - 32px));
     max-height: calc(100vh - 32px);
     overflow: auto;
     border: 1px solid #d9e3ed;
@@ -231,6 +231,72 @@
   .tecton-fit-submit:disabled {
     opacity: 0.7;
     cursor: wait;
+  }
+
+  .tecton-fit-groups-link {
+    display: inline-block;
+    margin: 0 0 12px;
+    border: 0;
+    background: none;
+    padding: 0;
+    color: #0c6987;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: left;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  .tecton-fit-groups-link:hover {
+    color: #071b3b;
+  }
+
+  .tecton-fit-groups-link:focus-visible {
+    outline: 3px solid #0878bd;
+    outline-offset: 3px;
+  }
+
+  .tecton-fit-groups {
+    margin: 0 0 14px;
+    padding: 12px;
+    background: #f5f8fb;
+    border-radius: 12px;
+  }
+
+  .tecton-fit-groups h3 {
+    margin: 0 0 8px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #0878bd;
+  }
+
+  .tecton-fit-groups .tecton-strip-scale {
+    margin-bottom: 12px;
+  }
+
+  .tecton-fit-groups .tecton-strip-scale:last-child {
+    margin-bottom: 0;
+  }
+
+  .tecton-fit-groups .tecton-strip {
+    padding: 4px 0;
+    gap: 4px;
+  }
+
+  .tecton-fit-groups .tecton-swatch {
+    height: 36px;
+  }
+
+  .tecton-fit-groups .tecton-strip-name {
+    font-size: 11px;
+  }
+
+  .tecton-fit-groups .tecton-strip-rank {
+    font-size: 10px;
   }
 
   .tecton-fit-honey {
@@ -1439,6 +1505,29 @@
     <label for="tecton-fit-email">Email
       <input id="tecton-fit-email" name="email" type="email" autocomplete="email" required>
     </label>
+    <button type="button" class="tecton-fit-groups-link" data-fit-groups-open aria-expanded="false" aria-controls="tecton-fit-groups">See grip strip groups, thinnest to thickest</button>
+    <div id="tecton-fit-groups" class="tecton-fit-groups" data-fit-groups hidden>
+      <h3>Group 1</h3>
+      <ol class="tecton-strip-scale" aria-label="Group 1, thinnest to thickest">
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-black" aria-hidden="true"></span><span class="tecton-strip-name">Black</span><span class="tecton-strip-rank">Thinnest</span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-gray" aria-hidden="true"></span><span class="tecton-strip-name">Gray</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-white" aria-hidden="true"></span><span class="tecton-strip-name">White</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-orange" aria-hidden="true"></span><span class="tecton-strip-name">Orange</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-red" aria-hidden="true"></span><span class="tecton-strip-name">Red</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-green" aria-hidden="true"></span><span class="tecton-strip-name">Green</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-blue" aria-hidden="true"></span><span class="tecton-strip-name">Blue</span><span class="tecton-strip-rank">Thickest</span></li>
+      </ol>
+      <h3>Group 2</h3>
+      <ol class="tecton-strip-scale" aria-label="Group 2, thinnest to thickest">
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-orange" aria-hidden="true"></span><span class="tecton-strip-name">Orange</span><span class="tecton-strip-rank">Thinnest</span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-green" aria-hidden="true"></span><span class="tecton-strip-name">Green</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-blue" aria-hidden="true"></span><span class="tecton-strip-name">Blue</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-gray" aria-hidden="true"></span><span class="tecton-strip-name">Gray</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-black" aria-hidden="true"></span><span class="tecton-strip-name">Black</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-white" aria-hidden="true"></span><span class="tecton-strip-name">White</span><span class="tecton-strip-rank"></span></li>
+        <li class="tecton-strip"><span class="tecton-swatch tecton-swatch-red" aria-hidden="true"></span><span class="tecton-strip-name">Red</span><span class="tecton-strip-rank">Thickest</span></li>
+      </ol>
+    </div>
     <label for="tecton-fit-loose">Loose Grip Strip Selection
       <select id="tecton-fit-loose" name="loose" required>
         <option value="">Select a strip</option>
@@ -1539,6 +1628,17 @@
   dialog.addEventListener("click", function (event) {
     if (event.target === dialog) dialog.close();
   });
+
+  var groupsButton = dialog.querySelector("[data-fit-groups-open]");
+  var groups = dialog.querySelector("[data-fit-groups]");
+  if (groupsButton && groups) {
+    groupsButton.addEventListener("click", function () {
+      var open = groups.hidden;
+      groups.hidden = !open;
+      groupsButton.setAttribute("aria-expanded", open ? "true" : "false");
+      groupsButton.textContent = open ? "Hide grip strip groups" : "See grip strip groups, thinnest to thickest";
+    });
+  }
 
   form.addEventListener("submit", function (event) {
     event.preventDefault();

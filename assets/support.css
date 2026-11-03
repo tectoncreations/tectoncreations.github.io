@@ -52,7 +52,7 @@ footer { background:#101820; color:#cbd5da; padding:28px 0; font-size:.9rem; }
 .finder-fit-link { margin-left:auto; border:0; background:none; padding:0; color:#0c6987; font:inherit; font-size:.92rem; font-weight:700; text-align:right; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
 .finder-fit-link:hover { color:#071b3b; }
 .finder-fit-link:focus-visible { outline:3px solid #167fa6; outline-offset:3px; }
-.fit-dialog { width:min(480px, calc(100vw - 32px)); max-height:calc(100vh - 32px); overflow:auto; border:1px solid #d9e3ed; border-radius:16px; padding:0; color:var(--hub-ink); box-shadow:0 18px 50px rgba(7,27,59,.22); }
+.fit-dialog { width:min(560px, calc(100vw - 32px)); max-height:calc(100vh - 32px); overflow:auto; border:1px solid #d9e3ed; border-radius:16px; padding:0; color:var(--hub-ink); box-shadow:0 18px 50px rgba(7,27,59,.22); }
 .fit-dialog::backdrop { background:rgba(7,27,59,.55); }
 .fit-form, .fit-success { padding:24px 24px 20px; }
 .fit-form h2, .fit-success h2 { margin:0 0 8px; font-size:1.45rem; line-height:1.25; color:var(--hub-ink); }
@@ -68,6 +68,17 @@ footer { background:#101820; color:#cbd5da; padding:28px 0; font-size:.9rem; }
 .fit-submit:hover, .fit-success button:hover { background:#005b94; }
 .fit-submit:disabled { opacity:.7; cursor:wait; }
 .fit-honey { position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
+.fit-groups-link { display:inline-block; margin:0 0 12px; border:0; background:none; padding:0; color:#0c6987; font:inherit; font-size:.92rem; font-weight:700; text-align:left; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
+.fit-groups-link:hover { color:#071b3b; }
+.fit-groups-link:focus-visible { outline:3px solid #167fa6; outline-offset:3px; }
+.fit-groups { margin:0 0 14px; padding:12px; background:#f5f8fb; border-radius:12px; }
+.fit-groups h3 { margin:0 0 8px; font-size:.78rem; font-weight:800; letter-spacing:.08em; text-transform:uppercase; color:#187b9d; }
+.fit-groups .strip-scale { margin-bottom:12px; }
+.fit-groups .strip-scale:last-child { margin-bottom:0; }
+.fit-groups .strip { padding:4px 0; gap:4px; }
+.fit-groups .swatch { height:36px; }
+.fit-groups .strip-name { font-size:.68rem; }
+.fit-groups .strip-rank { font-size:.6rem; }
 .finder-count { margin:0 0 10px; color:#4e606d; font-size:.95rem; }
 .finder-count strong { color:var(--hub); font-size:1.15rem; }
 .finder-combo { position:relative; }
