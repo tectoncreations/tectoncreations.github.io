@@ -55,35 +55,37 @@
     submit.disabled = true;
     submit.textContent = "Sending…";
 
-    fetch("https://formsubmit.co/ajax/2fe5755cb6e0f4410f5397f65a1b2da4", {
+    fetch("https://api.web3forms.com/submit", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         Accept: "application/json"
       },
       body: JSON.stringify({
+        access_key: "a974902d-4184-421c-bd11-fd85515d3d09",
+        subject: "Grip strip between a loose and tight fit",
+        from_name: "Tecton Forge fit request",
         email: address,
-        _replyto: address,
-        _subject: "Grip strip between a loose and tight fit",
         "Loose Grip Strip Selection": form.elements.loose.value,
         "Tight Grip Strip Selection": form.elements.tight.value,
         "Laptop model": form.elements.laptop.value.trim(),
-        _template: "table",
-        _captcha: "false"
+        botcheck: ""
       })
     }).then(function (response) {
       return response.json().then(function (data) {
-        if (!response.ok || (data && String(data.success) === "false")) {
-          throw new Error("send failed");
+        if (!response.ok || !data || data.success !== true) {
+          var failure = new Error("send failed");
+          failure.detail = data && data.message;
+          throw failure;
         }
         form.reset();
         form.hidden = true;
         success.hidden = false;
       });
-    }).catch(function () {
+    }).catch(function (error) {
       submit.disabled = false;
       submit.textContent = "Send request";
-      showError("We couldn't send that. Please try again.");
+      showError((error && error.detail) || "We couldn't send that. Please try again.");
     });
   });
 })();
