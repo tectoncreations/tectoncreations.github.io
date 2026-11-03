@@ -55,7 +55,7 @@
     submit.disabled = true;
     submit.textContent = "Sending…";
 
-    fetch("https://formsubmit.co/ajax/daniel@tectoncreations.com", {
+    fetch("https://formsubmit.co/ajax/2fe5755cb6e0f4410f5397f65a1b2da4", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
