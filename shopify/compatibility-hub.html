@@ -78,12 +78,167 @@
     text-align: left;
   }
 
+  .tecton-finder-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 12px 16px;
+    margin-bottom: 4px;
+  }
+
   .tecton-finder-label {
     display: block;
     font-weight: 800;
     color: #071b3b;
     margin-bottom: 4px;
     font-size: 16px;
+  }
+
+  .tecton-finder-head .tecton-finder-label {
+    margin-bottom: 0;
+  }
+
+  .tecton-finder-fit-link {
+    margin-left: auto;
+    border: 0;
+    background: none;
+    padding: 0;
+    color: #0c6987;
+    font: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    text-align: right;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    cursor: pointer;
+  }
+
+  .tecton-finder-fit-link:hover {
+    color: #071b3b;
+  }
+
+  .tecton-finder-fit-link:focus-visible {
+    outline: 3px solid #0878bd;
+    outline-offset: 3px;
+  }
+
+  .tecton-fit-dialog {
+    width: min(480px, calc(100vw - 32px));
+    max-height: calc(100vh - 32px);
+    overflow: auto;
+    border: 1px solid #d9e3ed;
+    border-radius: 16px;
+    padding: 0;
+    color: #071b3b;
+    font-family: Arial, Helvetica, sans-serif;
+    box-shadow: 0 18px 50px rgba(7, 27, 59, 0.22);
+  }
+
+  .tecton-fit-dialog::backdrop {
+    background: rgba(7, 27, 59, 0.55);
+  }
+
+  .tecton-fit-form,
+  .tecton-fit-success {
+    padding: 24px 24px 20px;
+  }
+
+  .tecton-fit-form h2,
+  .tecton-fit-success h2 {
+    margin: 0 0 8px;
+    font-size: 24px;
+    line-height: 1.25;
+    color: #071b3b;
+  }
+
+  .tecton-fit-form > p,
+  .tecton-fit-success p {
+    margin: 0 0 16px;
+    color: #344054;
+    line-height: 1.5;
+    font-size: 16px;
+  }
+
+  .tecton-fit-form label {
+    display: block;
+    margin: 0 0 12px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #071b3b;
+  }
+
+  .tecton-fit-form input,
+  .tecton-fit-form select {
+    display: block;
+    width: 100%;
+    margin-top: 6px;
+    border: 1px solid #c5d4e0;
+    border-radius: 8px;
+    background: #fff;
+    color: #071b3b;
+    font: inherit;
+    font-size: 16px;
+    font-weight: 400;
+    padding: 12px;
+  }
+
+  .tecton-fit-form input:focus,
+  .tecton-fit-form select:focus {
+    outline: 3px solid #0878bd;
+    outline-offset: 2px;
+  }
+
+  .tecton-fit-error {
+    margin: 0 0 12px;
+    color: #9b1c1c;
+    font-weight: 700;
+  }
+
+  .tecton-fit-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-top: 4px;
+  }
+
+  .tecton-fit-cancel,
+  .tecton-fit-submit,
+  .tecton-fit-success button {
+    border: 0;
+    border-radius: 8px;
+    font: inherit;
+    font-weight: 700;
+    padding: 12px 16px;
+    cursor: pointer;
+  }
+
+  .tecton-fit-cancel {
+    background: #e8eef3;
+    color: #071b3b;
+  }
+
+  .tecton-fit-submit,
+  .tecton-fit-success button {
+    background: #0878bd;
+    color: #fff !important;
+  }
+
+  .tecton-fit-submit:hover,
+  .tecton-fit-success button:hover {
+    background: #005b94;
+  }
+
+  .tecton-fit-submit:disabled {
+    opacity: 0.7;
+    cursor: wait;
+  }
+
+  .tecton-fit-honey {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
   }
 
   .tecton-finder-count {
@@ -406,6 +561,10 @@
       flex-direction: column;
       gap: 2px;
     }
+
+    .tecton-finder-fit-link {
+      max-width: 11rem;
+    }
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -426,7 +585,10 @@
     <div class="tecton-hub-subtitle">GRIP STRIP COMPATIBILITY GUIDE</div>
     <p class="tecton-hub-description">Select your laptop manufacturer to find the correct Grip Strips for your Tecton Forge™ Phone Wing.</p>
     <div class="tecton-finder" data-tecton-finder>
-      <label class="tecton-finder-label" for="tecton-laptop-search">Find your laptop</label>
+      <div class="tecton-finder-head">
+        <label class="tecton-finder-label" for="tecton-laptop-search">Find your laptop</label>
+        <button type="button" class="tecton-finder-fit-link" data-fit-open>Strips too loose or too tight?</button>
+      </div>
       <p id="tecton-finder-count" class="tecton-finder-count"></p>
       <div class="tecton-finder-combo">
         <input id="tecton-laptop-search" class="tecton-laptop-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="tecton-laptop-results" aria-describedby="tecton-finder-count tecton-finder-status" autocomplete="off" placeholder="Try MacBook Air, XPS 13, or Legion" spellcheck="false">
@@ -1267,6 +1429,164 @@
 
   document.addEventListener("click", function (event) {
     if (!root.contains(event.target)) closeList();
+  });
+})();
+</script>
+<dialog class="tecton-fit-dialog" data-fit-dialog aria-labelledby="tecton-fit-request-title">
+  <form class="tecton-fit-form" data-fit-form>
+    <h2 id="tecton-fit-request-title">We'll mail a strip that fits</h2>
+    <p>If the Grip Strips you have are too loose or too tight, choose the loose one and the tight one, then enter your laptop. We'll make a strip sized between those two fits and mail it to you. That resolves the fit.</p>
+    <label for="tecton-fit-email">Email
+      <input id="tecton-fit-email" name="email" type="email" autocomplete="email" required>
+    </label>
+    <label for="tecton-fit-loose">Loose Grip Strip Selection
+      <select id="tecton-fit-loose" name="loose" required>
+        <option value="">Select a strip</option>
+        <optgroup label="Group 1, thin to thick">
+          <option>Group 1 · Black</option>
+          <option>Group 1 · Gray</option>
+          <option>Group 1 · White</option>
+          <option>Group 1 · Orange</option>
+          <option>Group 1 · Red</option>
+          <option>Group 1 · Green</option>
+          <option>Group 1 · Blue</option>
+        </optgroup>
+        <optgroup label="Group 2, thin to thick">
+          <option>Group 2 · Orange</option>
+          <option>Group 2 · Green</option>
+          <option>Group 2 · Blue</option>
+          <option>Group 2 · Gray</option>
+          <option>Group 2 · Black</option>
+          <option>Group 2 · White</option>
+          <option>Group 2 · Red</option>
+        </optgroup>
+      </select>
+    </label>
+    <label for="tecton-fit-tight">Tight Grip Strip Selection
+      <select id="tecton-fit-tight" name="tight" required>
+        <option value="">Select a strip</option>
+        <optgroup label="Group 1, thin to thick">
+          <option>Group 1 · Black</option>
+          <option>Group 1 · Gray</option>
+          <option>Group 1 · White</option>
+          <option>Group 1 · Orange</option>
+          <option>Group 1 · Red</option>
+          <option>Group 1 · Green</option>
+          <option>Group 1 · Blue</option>
+        </optgroup>
+        <optgroup label="Group 2, thin to thick">
+          <option>Group 2 · Orange</option>
+          <option>Group 2 · Green</option>
+          <option>Group 2 · Blue</option>
+          <option>Group 2 · Gray</option>
+          <option>Group 2 · Black</option>
+          <option>Group 2 · White</option>
+          <option>Group 2 · Red</option>
+        </optgroup>
+      </select>
+    </label>
+    <label for="tecton-fit-laptop">Laptop model
+      <input id="tecton-fit-laptop" name="laptop" type="text" autocomplete="off" required placeholder="Example: Dell XPS 13 9340">
+    </label>
+    <p class="tecton-fit-error" data-fit-error role="alert" hidden></p>
+    <div class="tecton-fit-actions">
+      <button type="button" class="tecton-fit-cancel" data-fit-close>Cancel</button>
+      <button type="submit" class="tecton-fit-submit">Send request</button>
+    </div>
+    <div class="tecton-fit-honey" aria-hidden="true"><input name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+  </form>
+  <div class="tecton-fit-success" data-fit-success hidden>
+    <h2>Request sent</h2>
+    <p>We'll make a strip sized between the loose fit and the tight fit and mail it to you.</p>
+    <button type="button" data-fit-close>Close</button>
+  </div>
+</dialog>
+<script>
+(function () {
+  var openers = document.querySelectorAll("[data-fit-open]");
+  var dialog = document.querySelector("[data-fit-dialog]");
+  if (!openers.length || !dialog || typeof dialog.showModal !== "function") return;
+
+  var form = dialog.querySelector("[data-fit-form]");
+  var error = dialog.querySelector("[data-fit-error]");
+  var success = dialog.querySelector("[data-fit-success]");
+  var submit = form.querySelector("[type='submit']");
+  var email = form.querySelector("[name='email']");
+
+  function showError(message) {
+    error.hidden = !message;
+    error.textContent = message || "";
+  }
+
+  openers.forEach(function (opener) {
+    opener.addEventListener("click", function () {
+      form.hidden = false;
+      success.hidden = true;
+      submit.disabled = false;
+      submit.textContent = "Send request";
+      showError("");
+      dialog.showModal();
+      email.focus();
+    });
+  });
+
+  dialog.querySelectorAll("[data-fit-close]").forEach(function (button) {
+    button.addEventListener("click", function () {
+      dialog.close();
+    });
+  });
+
+  dialog.addEventListener("click", function (event) {
+    if (event.target === dialog) dialog.close();
+  });
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    showError("");
+    if (form.elements._honey.value) {
+      form.hidden = true;
+      success.hidden = false;
+      return;
+    }
+    if (form.elements.loose.value === form.elements.tight.value) {
+      showError("Choose two different strips so we can size one between the loose fit and the tight fit.");
+      return;
+    }
+
+    var address = form.elements.email.value.trim();
+    submit.disabled = true;
+    submit.textContent = "Sending…";
+
+    fetch("https://formsubmit.co/ajax/daniel@tectoncreations.com", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: JSON.stringify({
+        email: address,
+        _replyto: address,
+        _subject: "Grip strip between a loose and tight fit",
+        "Loose Grip Strip Selection": form.elements.loose.value,
+        "Tight Grip Strip Selection": form.elements.tight.value,
+        "Laptop model": form.elements.laptop.value.trim(),
+        _template: "table",
+        _captcha: "false"
+      })
+    }).then(function (response) {
+      return response.json().then(function (data) {
+        if (!response.ok || (data && String(data.success) === "false")) {
+          throw new Error("send failed");
+        }
+        form.reset();
+        form.hidden = true;
+        success.hidden = false;
+      });
+    }).catch(function () {
+      submit.disabled = false;
+      submit.textContent = "Send request";
+      showError("We couldn't send that. Please try again.");
+    });
   });
 })();
 </script>

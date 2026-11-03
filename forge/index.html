@@ -26,7 +26,10 @@
         <p>Search for your laptop, or select a manufacturer below. This guide is for Etsy orders and shop orders.</p>
       </div>
       <div class="finder" data-finder>
-        <label for="laptop-search">Find your laptop</label>
+        <div class="finder-head">
+          <label for="laptop-search">Find your laptop</label>
+          <button type="button" class="finder-fit-link" data-fit-open>Strips too loose or too tight?</button>
+        </div>
         <p id="finder-count" class="finder-count"></p>
         <div class="finder-combo">
           <input id="laptop-search" type="search" role="combobox" aria-autocomplete="list" aria-expanded="false" aria-controls="laptop-results" aria-describedby="finder-count finder-status" autocomplete="off" placeholder="Try MacBook Air, XPS 13, or Legion" spellcheck="false">
@@ -116,8 +119,78 @@
 
   <footer><div class="container footer-inner"><span>© <span class="year">2026</span> Tecton Creations LLC. All rights reserved.</span><span>Built With Intent.</span></div></footer>
   <script>document.querySelectorAll(".year").forEach(function (el) { el.textContent = new Date().getFullYear(); });</script>
+  <dialog class="fit-dialog" data-fit-dialog aria-labelledby="fit-request-title">
+    <form class="fit-form" data-fit-form>
+      <h2 id="fit-request-title">We'll mail a strip that fits</h2>
+      <p>If the Grip Strips you have are too loose or too tight, choose the loose one and the tight one, then enter your laptop. We'll make a strip sized between those two fits and mail it to you. That resolves the fit.</p>
+      <label for="fit-email">Email
+        <input id="fit-email" name="email" type="email" autocomplete="email" required>
+      </label>
+      <label for="fit-loose">Loose Grip Strip Selection
+        <select id="fit-loose" name="loose" required>
+          <option value="">Select a strip</option>
+          <optgroup label="Group 1, thin to thick">
+            <option>Group 1 · Black</option>
+            <option>Group 1 · Gray</option>
+            <option>Group 1 · White</option>
+            <option>Group 1 · Orange</option>
+            <option>Group 1 · Red</option>
+            <option>Group 1 · Green</option>
+            <option>Group 1 · Blue</option>
+          </optgroup>
+          <optgroup label="Group 2, thin to thick">
+            <option>Group 2 · Orange</option>
+            <option>Group 2 · Green</option>
+            <option>Group 2 · Blue</option>
+            <option>Group 2 · Gray</option>
+            <option>Group 2 · Black</option>
+            <option>Group 2 · White</option>
+            <option>Group 2 · Red</option>
+          </optgroup>
+        </select>
+      </label>
+      <label for="fit-tight">Tight Grip Strip Selection
+        <select id="fit-tight" name="tight" required>
+          <option value="">Select a strip</option>
+          <optgroup label="Group 1, thin to thick">
+            <option>Group 1 · Black</option>
+            <option>Group 1 · Gray</option>
+            <option>Group 1 · White</option>
+            <option>Group 1 · Orange</option>
+            <option>Group 1 · Red</option>
+            <option>Group 1 · Green</option>
+            <option>Group 1 · Blue</option>
+          </optgroup>
+          <optgroup label="Group 2, thin to thick">
+            <option>Group 2 · Orange</option>
+            <option>Group 2 · Green</option>
+            <option>Group 2 · Blue</option>
+            <option>Group 2 · Gray</option>
+            <option>Group 2 · Black</option>
+            <option>Group 2 · White</option>
+            <option>Group 2 · Red</option>
+          </optgroup>
+        </select>
+      </label>
+      <label for="fit-laptop">Laptop model
+        <input id="fit-laptop" name="laptop" type="text" autocomplete="off" required placeholder="Example: Dell XPS 13 9340">
+      </label>
+      <p class="fit-error" data-fit-error role="alert" hidden></p>
+      <div class="fit-actions">
+        <button type="button" class="fit-cancel" data-fit-close>Cancel</button>
+        <button type="submit" class="fit-submit">Send request</button>
+      </div>
+      <div class="fit-honey" aria-hidden="true"><input name="_honey" type="text" tabindex="-1" autocomplete="off"></div>
+    </form>
+    <div class="fit-success" data-fit-success hidden>
+      <h2>Request sent</h2>
+      <p>We'll make a strip sized between the loose fit and the tight fit and mail it to you.</p>
+      <button type="button" data-fit-close>Close</button>
+    </div>
+  </dialog>
   <script src="/assets/grip-strips.js"></script>
   <script src="/assets/grip-search.js"></script>
+  <script src="/assets/fit-request.js"></script>
 
 </body>
 </html>

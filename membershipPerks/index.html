@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shopify preview | It's a Wealthy Life Membership Perks</title>
+</head>
+<body style="margin:0;background:#f5f8fb;">
+<!-- SHOPIFY START: paste from here through SHOPIFY END into the Shopify page custom HTML. -->
+<style>
+  .tecton-perks {
+    width: 94vw;
+    max-width: 1100px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    margin: 20px 0 48px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #071b3b;
+    box-sizing: border-box;
+  }
+
+  .tecton-perks * {
+    box-sizing: border-box;
+  }
+
+  .tecton-perks-header {
+    text-align: center;
+    margin-bottom: 34px;
+  }
+
+  .tecton-perks-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 0 0 10px;
+  }
+
+  .tecton-perks-avatar {
+    width: 76px;
+    height: 76px;
+    flex: 0 0 auto;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 2px 8px rgba(7, 27, 59, 0.16);
+  }
+
+  .tecton-perks-header h1 {
+    font-size: clamp(28px, 3vw, 46px);
+    font-weight: 800;
+    color: #071b3b;
+    margin: 0;
+    line-height: 1.2;
+    text-align: left;
+  }
+
+  .tecton-perks-header h1 span {
+    color: #0878bd;
+  }
+
+  .tecton-perks-subtitle {
+    font-size: clamp(14px, 1.5vw, 18px);
+    color: #68717e;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 12px;
+  }
+
+  .tecton-perks-description {
+    max-width: 680px;
+    margin: 0 auto;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #344054;
+  }
+
+  .tecton-perks-section-title {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 800;
+    color: #071b3b;
+  }
+
+  .tecton-perks-list {
+    display: grid;
+    gap: 18px;
+    margin: 0 0 42px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tecton-perk {
+    display: grid;
+    grid-template-columns: 280px minmax(0, 1fr);
+    gap: 0;
+    background: #fff;
+    border: 1px solid #d9e3ed;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0, 30, 70, 0.04);
+  }
+
+  .tecton-perk-image {
+    background: #2a2a2a;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tecton-perk-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    max-height: 320px;
+    object-fit: cover;
+  }
+
+  .tecton-perk-body {
+    padding: 26px 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .tecton-perk-month {
+    margin: 0 0 10px;
+    color: #0878bd;
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+  }
+
+  .tecton-perk h3 {
+    margin: 0 0 8px;
+    font-size: clamp(22px, 2vw, 28px);
+    line-height: 1.2;
+    color: #071b3b;
+  }
+
+  .tecton-perk p {
+    margin: 0 0 16px;
+    color: #344054;
+    font-size: 16px;
+    line-height: 1.55;
+  }
+
+  .tecton-perk-files {
+    display: flex;
+    gap: 8px;
+    margin: 0 0 18px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .tecton-perk-files li {
+    background: #e8f4fa;
+    color: #005b94;
+    border-radius: 999px;
+    padding: 4px 10px;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 0.06em;
+  }
+
+  .tecton-perk-download {
+    margin-top: auto;
+    display: inline-block;
+    background: #0878bd;
+    color: #fff !important;
+    text-decoration: none !important;
+    border-radius: 8px;
+    padding: 14px 18px;
+    font-size: 15px;
+    font-weight: 700;
+  }
+
+  .tecton-perk-download:hover {
+    background: #005b94;
+  }
+
+  .tecton-perk-download:focus-visible {
+    outline: 3px solid #071b3b;
+    outline-offset: 3px;
+  }
+
+  .tecton-license {
+    background: #fff;
+    border: 1px solid #d9e3ed;
+    border-top: 4px solid #0878bd;
+    border-radius: 16px;
+    padding: 28px 28px 24px;
+  }
+
+  .tecton-license h2 {
+    margin: 0 0 8px;
+    font-size: 26px;
+    line-height: 1.2;
+    color: #071b3b;
+  }
+
+  .tecton-license-lead {
+    margin: 0 0 20px;
+    font-size: 17px;
+    font-weight: 700;
+    color: #0878bd;
+  }
+
+  .tecton-license-rules {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 18px;
+    margin-bottom: 18px;
+  }
+
+  .tecton-license h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    color: #071b3b;
+  }
+
+  .tecton-license ul {
+    margin: 0;
+    padding-left: 18px;
+    color: #344054;
+    line-height: 1.55;
+  }
+
+  .tecton-license li + li {
+    margin-top: 6px;
+  }
+
+  .tecton-license-note {
+    margin: 0 0 16px;
+    color: #4e606d;
+  }
+
+  .tecton-license-foot {
+    margin: 0;
+    padding-top: 16px;
+    border-top: 1px solid #d9e3ed;
+    color: #071b3b;
+    font-size: 14px;
+    line-height: 1.5;
+  }
+
+  @media screen and (max-width: 760px) {
+    .tecton-perks {
+      width: 96vw;
+      margin: 10px 0 28px;
+    }
+
+    .tecton-perk,
+    .tecton-license-rules {
+      grid-template-columns: 1fr;
+    }
+
+    .tecton-perk-image {
+      min-height: 0;
+    }
+
+    .tecton-perk-image img {
+      max-height: 240px;
+    }
+
+    .tecton-perk-body,
+    .tecton-license {
+      padding: 22px;
+    }
+
+    .tecton-perks-title {
+      gap: 12px;
+    }
+
+    .tecton-perks-avatar {
+      width: 56px;
+      height: 56px;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .tecton-perk-download {
+      transition: none;
+    }
+  }
+</style>
+
+<div class="tecton-perks">
+  <header class="tecton-perks-header">
+    <div class="tecton-perks-title">
+      <img class="tecton-perks-avatar" src="https://yt3.googleusercontent.com/l1lE0jpDhaJSZL59am94H_bEjYrvG-FVZe-oADZs7hkfyH7SWyvME2en-5L_e1YQjyOtKBu0_g=s240-c-k-c0x00ffffff-no-rj" alt="It's a Wealthy Life channel photo" width="240" height="240">
+      <h1>It's a <span>Wealthy Life</span></h1>
+    </div>
+    <div class="tecton-perks-subtitle">MEMBERSHIP PERKS</div>
+    <p class="tecton-perks-description">Monthly downloads for members. Each file is a zip containing the STL and 3MF files for that month's 3D print.</p>
+  </header>
+
+  <section aria-labelledby="monthly-downloads">
+    <h2 class="tecton-perks-section-title" id="monthly-downloads">Monthly downloads</h2>
+    <ul class="tecton-perks-list">
+      <li>
+        <article class="tecton-perk">
+          <div class="tecton-perk-image">
+            <img src="https://tectoncreations.com/cdn/shop/files/TectonNookCreatorCaddy.png?v=1779138360&amp;width=1200" alt="Tecton Nook Creator Caddy, a handled six-compartment 3D printed carrier" width="1200" height="900">
+          </div>
+          <div class="tecton-perk-body">
+            <p class="tecton-perk-month">November 2026</p>
+            <h3>Tecton Nook Creator Caddy</h3>
+            <p>A handled caddy with nine compartments, ready to print for your Tecton Nook setup.</p>
+            <ul class="tecton-perk-files" aria-label="Included file types">
+              <li>STL</li>
+              <li>3MF</li>
+            </ul>
+            <a class="tecton-perk-download" href="https://cdn.shopify.com/s/files/1/0795/7456/5088/files/Tecton_Nook_Creator_Caddy.zip?v=1793624028">Download November zip</a>
+          </div>
+        </article>
+      </li>
+    </ul>
+  </section>
+
+  <section class="tecton-license" aria-labelledby="license-title">
+    <h2 id="license-title">Rights and usage</h2>
+    <p class="tecton-license-lead">Tecton Creations Community License. Commercial sale of physical prints is permitted.</p>
+    <div class="tecton-license-rules">
+      <div>
+        <h3>You may:</h3>
+        <ul>
+          <li>Print and use this model for personal use</li>
+          <li>Sell physical prints made from this file</li>
+          <li>Modify and remix the design</li>
+        </ul>
+      </div>
+      <div>
+        <h3>You may NOT:</h3>
+        <ul>
+          <li>Resell, share, or redistribute the digital STL file</li>
+          <li>Upload the STL file to other marketplaces, repositories, or file-sharing websites</li>
+          <li>Claim the original design as your own</li>
+          <li>Use the Tecton Creations or Tecton Nook names, logos, or branding without written permission</li>
+        </ul>
+      </div>
+    </div>
+    <p class="tecton-license-note">Attribution is appreciated, but not required.</p>
+    <p class="tecton-license-foot">© Tecton Creations LLC<br>Designed and created by Tecton Creations LLC — Built With Intent™</p>
+  </section>
+</div>
+<!-- SHOPIFY END -->
+</body>
+</html>
