@@ -17,12 +17,11 @@ window.GRIP_STRIPS = {
     { manufacturer: "Apple", name: "MacBook Pro 13\" Retina", detail: "A1502", group: 2, color: "Black", chart: "/forge/apple/" },
     { manufacturer: "Apple", name: "MacBook Pro 13\"", detail: "A1708", group: 2, color: "Red", chart: "/forge/apple/" },
 
-    { manufacturer: "Dell", name: "XPS 13", detail: "9310 / 9320 / 9340 / 9350", group: 1, color: "White", chart: "/forge/dell/" },
-    { manufacturer: "Dell", name: "XPS 16", detail: "9640 / 9650", group: 2, color: "Black", chart: "/forge/dell/" },
-    { manufacturer: "Dell", name: "XPS 17", detail: "9700 / 9710 / 9720 / 9730", group: 2, color: "Gray", chart: "/forge/dell/" },
-    { manufacturer: "Dell", name: "Latitude 13", detail: "7330 / 7340 / 7350", group: 1, color: "White", chart: "/forge/dell/" },
-    { manufacturer: "Dell", name: "Latitude 14", detail: "7440 / 7450 / 7455", group: 2, color: "Red", chart: "/forge/dell/" },
-    { manufacturer: "Dell", name: "Latitude 15", detail: "5540 / 5550", group: 2, color: "Red", chart: "/forge/dell/" },
+    { manufacturer: "Dell", name: "XPS Googlebook", detail: "13.4\" 2.5K Touchscreen", group: 2, color: "Gray", chart: "/forge/dell/" },
+    { manufacturer: "Dell", name: "XPS", detail: "13.4\" & 14\" Touchscreen", group: 2, color: "Gray", chart: "/forge/dell/" },
+    { manufacturer: "Dell", name: "15.6\"", detail: "2K Touchscreen", group: 1, color: "Red", chart: "/forge/dell/" },
+    { manufacturer: "Dell", name: "15.3\"", detail: "2K Touchscreen", group: 1, color: "Green", chart: "/forge/dell/" },
+    { manufacturer: "Dell", name: "16S, 14S", detail: "2K Touchscreen", group: 2, color: "Green", chart: "/forge/dell/" },
 
     { manufacturer: "HP", name: "Omnibook Ultra", detail: "14\" 3K OLED Touchscreen", group: 2, color: "Black", chart: "/forge/hp/" },
     { manufacturer: "HP", name: "Omnibook 5", detail: "14\" 2K OLED Touchscreen", group: 2, color: "Black", chart: "/forge/hp/" },

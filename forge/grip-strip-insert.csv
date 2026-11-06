@@ -1,0 +1,67 @@
+Manufacturer,Group,Grip Strip Color,Laptop Model,Detail
+Apple,Group 2,Gray,"MacBook Neo 13""",2026+
+Apple,Group 2,Gray,"MacBook Pro 14""",2021+
+Apple,Group 2,Black,"MacBook Pro 13"" Retina",A1502
+Apple,Group 2,Black,"MacBook Pro 16""",2021+
+Apple,Group 2,Red,"MacBook Air 13""",M2+ 2022+
+Apple,Group 2,Red,"MacBook Air 15""",M2+ 2022+
+Apple,Group 2,Red,"MacBook Pro 13""",A1708
+Dell,Group 1,Red,"15.6""",2K Touchscreen
+Dell,Group 1,Green,"15.3""",2K Touchscreen
+Dell,Group 2,Green,"16S, 14S",2K Touchscreen
+Dell,Group 2,Gray,XPS,"13.4"" & 14"" Touchscreen"
+Dell,Group 2,Gray,XPS Googlebook,"13.4"" 2.5K Touchscreen"
+HP,Group 1,Gray,Chromebook Plus,"2-in-1 14"" 2K Touchscreen"
+HP,Group 1,Orange,Chromebook Plus,"14"" 2K Touchscreen"
+HP,Group 1,Orange,Omnibook 3,"14"" & 16"" 2K Touchscreen"
+HP,Group 1,Orange,Omnibook X,"17.3"" Touchscreen Laptop"
+HP,Group 1,Red,Hyperx Omen,"16"" 2K Gaming Laptop"
+HP,Group 1,Red,Omnibook 3,"17.3"" HD Laptop"
+HP,Group 1,Red,Omnibook X,"Flip 2-in-1 16"" Touchscreen"
+HP,Group 1,Red,Victus,"15.6"" Gaming Laptop"
+HP,Group 1,Green,Omnibook 3,"14"" OLED Laptop"
+HP,Group 1,Green,Omnibook X,"16"" 2K OLED Touchscreen"
+HP,Group 2,Orange,Omnibook X,"14"" 2K OLED Touchscreen"
+HP,Group 2,Black,Googlebook,"14"" 3K OLED Touchscreen"
+HP,Group 2,Black,Omnibook 5,"14"" 2K OLED Touchscreen"
+HP,Group 2,Black,Omnibook Ultra,"14"" 3K OLED Touchscreen"
+Lenovo,Group 1,Orange,Chromebook Plus,"15.3"" 2K Touchscreen"
+Lenovo,Group 1,Orange,IdeaPad Slim 3i,"15.6"" HD Laptop, 15.3"" 2K Touchscreen"
+Lenovo,Group 1,Red,IdeaPad Slim 3,"14"" 2K Touchscreen"
+Lenovo,Group 1,Red,LOQ,"15.6"" 2K Gaming Laptop"
+Lenovo,Group 1,Green,Yoga 7a,"16"" 2K OLED Touchscreen"
+Lenovo,Group 1,Blue,Chromebook Plus 2-in-1,"14"" Full HD Touchscreen"
+Lenovo,Group 2,Orange,Googlebook,"15.3"" 3K 120Hz OLED Touchscreen"
+Lenovo,Group 2,Orange,Yoga 7a,"14"" 2K OLED Touchscreen"
+Lenovo,Group 2,Green,"Yoga 9n, 9i","16"" & 14"" 2-in-1 3K OLED Touchscreen"
+Lenovo,Group 2,Blue,Legion 7a,"16"" 2.5K Gaming Laptop"
+Lenovo,Group 2,Black,Yoga Pro 7a,"15.3"" 3K OLED Touchscreen"
+Lenovo,Group 2,White,Yoga Pro 7i Aura Edition,"15.3"" 3K OLED Laptop"
+Lenovo,Group 2,White,Yoga Slim 7X,"14"" 2K OLED Touchscreen"
+ASUS,Group 1,Black,ROG Strix G18,"18"" 2.5K 240Hz Gaming Laptop"
+ASUS,Group 1,Orange,Chromebook CX14,"14"" FHD"
+ASUS,Group 1,Orange,Chromebook Plus CX34,"14"" FHD"
+ASUS,Group 1,Green,Vivobook Go 14,"14"" 2K Laptop"
+ASUS,Group 1,Blue,ROG Strix G16,"16"" FHD 165Hz Gaming Laptop"
+ASUS,Group 2,Orange,Zenbook 14,"14"" 2K OLED Touchscreen"
+ASUS,Group 2,Blue,Zenbook 14,"14"" 2K OLED Laptop"
+ASUS,Group 2,Gray,ProArt PX13,"13"" 3K OLED 2-in-1 Touchscreen"
+ASUS,Group 2,White,ROG Zephyrus G14,"14"" OLED 3K Gaming Laptop"
+ASUS,Group 2,Red,"ProArt P16, P14","16"" & 14"" OLED Touchscreen"
+Acer,Group 1,Orange,Chromebook (Plus),"516 16"", 315 15.6"" Laptops"
+Acer,Group 1,Blue,Nitro V,"16"" WUXGA Gaming"
+Acer,Group 2,Orange,Predator Neo,"16"" Gaming Laptop"
+Acer,Group 2,Green,Swift Go,"16"" 2K OLED Laptop"
+Acer,Group 2,Green,Swift Go,"16"" WUXGA Touchscreen"
+Acer,Group 2,Gray,Swift Air,"14"" 2K LCD Laptop"
+Samsung,Group 2,Blue,Galaxy Book 4 Edge,"15.6"" FHD IPS Laptop"
+Samsung,Group 2,Blue,Galaxy Book 6,"16"" Touchscreen IPS LED"
+Microsoft,Group 1,White,Surface Pro,"12"" Touchscreen"
+Microsoft,Group 2,Red,Surface Laptop,"13"" 2K Touchscreen"
+Microsoft,Group 2,Red,Surface Laptop,"13.8"" 2K Touchscreen"
+Microsoft,Group 2,Red,Surface Laptop Ultra,"15"" 3K Touchscreen"
+LG,Group 1,Blue,gram Book,"16"" Touchscreen"
+LG,Group 2,Blue,gram Max,"17"" 2.5K WQXGA Touchscreen"
+Gaming,Group 1,White,Alienware,"15.3"" 2K Gaming Laptop"
+Gaming,Group 1,Orange,Gigabyte A16,165Hz 1920x1200 WUXGA Gaming
+Gaming,Group 1,Orange,MSI Raider 16 HX,"16"" 2.5K QHD 240Hz Gaming"
