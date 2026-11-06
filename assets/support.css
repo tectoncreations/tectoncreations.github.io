@@ -69,7 +69,11 @@ footer { background:#101820; color:#cbd5da; padding:28px 0; font-size:.9rem; }
 .fit-submit:disabled { opacity:.7; cursor:wait; }
 .fit-honey { position:absolute; left:-9999px; width:1px; height:1px; opacity:0; }
 .fit-groups-link { display:inline-block; margin:0 0 12px; border:0; background:none; padding:0; color:#0c6987; font:inherit; font-size:.92rem; font-weight:700; text-align:left; text-decoration:underline; text-underline-offset:3px; cursor:pointer; }
-.finder .fit-groups-link { margin-top:10px; }
+.finder-under { display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:8px 16px; margin-top:10px; }
+.finder-under .fit-groups-link { margin:0; }
+.finder-download { margin-left:auto; flex-shrink:0; color:#0c6987; font-size:.92rem; font-weight:700; text-align:right; text-decoration:underline; text-underline-offset:3px; white-space:nowrap; }
+.finder-download:hover { color:#071b3b; }
+.finder-download:focus-visible { outline:3px solid #167fa6; outline-offset:3px; }
 .fit-groups-link:hover { color:#071b3b; }
 .fit-groups-link:focus-visible { outline:3px solid #167fa6; outline-offset:3px; }
 .fit-groups { margin:0 0 14px; padding:12px; background:#f5f8fb; border-radius:12px; }

@@ -1,4 +1,26 @@
 (function () {
+  document.querySelectorAll("[data-pdf-download]").forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      var name = link.getAttribute("download") || "Tecton_Forge_Laptop_Grip_Strip_Compatibility.pdf";
+      fetch(link.href).then(function (response) {
+        if (!response.ok) throw new Error("download failed");
+        return response.blob();
+      }).then(function (blob) {
+        var url = URL.createObjectURL(blob);
+        var saver = document.createElement("a");
+        saver.href = url;
+        saver.download = name;
+        document.body.appendChild(saver);
+        saver.click();
+        saver.remove();
+        setTimeout(function () { URL.revokeObjectURL(url); }, 1000);
+      }).catch(function () {
+        window.open(link.href, "_blank", "noopener");
+      });
+    });
+  });
+
   var openers = document.querySelectorAll("[data-fit-open]");
   var dialog = document.querySelector("[data-fit-dialog]");
   if (!openers.length || !dialog || typeof dialog.showModal !== "function") return;
